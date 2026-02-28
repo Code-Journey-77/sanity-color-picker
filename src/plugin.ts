@@ -1,11 +1,7 @@
 import {definePlugin} from 'sanity'
 import {colorType} from './schemas/colorType'
 
-export interface ColorPickerPluginConfig {
-  // Add plugin configuration properties if needed
-}
-
-export const customColorPicker = definePlugin<ColorPickerPluginConfig | void>((config) => {
+export const customColorPicker = definePlugin(() => {
   return {
     name: 'sanity-plugin-color-input',
     schema: {

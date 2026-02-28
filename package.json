@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-color-input",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Professional color picker with gradient support for Sanity Studio v3, v4, and v5",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,12 +37,12 @@
   "author": "Code-Journey <codejourney.info@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Code-Journey-77/sanity-color-picker.git"
+    "url": "https://github.com/Code-Journey-77/sanity-plugin-color-input"
   },
   "bugs": {
-    "url": "https://github.com/Code-Journey-77/sanity-color-picker/issues"
+    "url": "https://github.com/Code-Journey-77/sanity-plugin-color-input/issues"
   },
-  "homepage": "https://github.com/Code-Journey-77/sanity-color-picker#readme",
+  "homepage": "https://github.com/Code-Journey-77/sanity-plugin-color-input#readme",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

@@ -1,6 +1,6 @@
 # sanity-plugin-color-input
 
-A beautifully designed, highly customizable color picker plugin for Sanity Studio v3.
+A beautifully designed, highly customizable color picker plugin for Sanity Studio v3, v4, and v5.
 
 ## Features
 
@@ -9,7 +9,7 @@ A beautifully designed, highly customizable color picker plugin for Sanity Studi
 - 💅 **Rich Return Format**: Provides HEX, RGBA, and HSL for solids, plus full CSS `linear-gradient` strings for gradients.
 - ✨ **Customizable Color Presets**: Use our meticulously crafted predefined presets or provide your own custom branded colors via options.
 - 📋 **One-Click Copy**: Easily copy HEX, RGBA, HSL, and CSS Gradient values to clipboard.
-- 🚀 **Built for Sanity v3**: Fully compatible with the modern Sanity Studio V3 architecture.
+- 🚀 **Built for Sanity**: Fully compatible with Sanity Studio v3, v4, and v5 architecture.
 
 ## Installation
 

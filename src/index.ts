@@ -1,1 +1,1 @@
-export {customColorPicker, type ColorPickerPluginConfig} from './plugin'
+export {customColorPicker} from './plugin'
