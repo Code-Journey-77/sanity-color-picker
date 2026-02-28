@@ -52,3 +52,7 @@ export function hexToHsl(hex: string) {
 
   return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`
 }
+
+export function getGradientString(angle: number, color1: string, color2: string) {
+  return `linear-gradient(${angle}deg, ${color1}, ${color2})`
+}

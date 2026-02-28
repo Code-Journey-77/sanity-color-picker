@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest'
-import {isValidHex, getContrastColor, hexToRgba, hexToHsl} from './index'
+import {isValidHex, getContrastColor, hexToRgba, hexToHsl, getGradientString} from './index'
 
 describe('Color Utilities', () => {
   describe('isValidHex', () => {
@@ -66,6 +66,20 @@ describe('Color Utilities', () => {
     it('should return empty string for invalid hex', () => {
       expect(hexToHsl('invalid')).toBe('')
       expect(hexToHsl('#123')).toBe('')
+    })
+  })
+
+  describe('getGradientString', () => {
+    it('should correctly format a linear gradient string', () => {
+      expect(getGradientString(180, '#ff0000', '#0000ff')).toBe(
+        'linear-gradient(180deg, #ff0000, #0000ff)',
+      )
+      expect(getGradientString(45, '#ffffff', '#000000')).toBe(
+        'linear-gradient(45deg, #ffffff, #000000)',
+      )
+      expect(getGradientString(0, '#00ff00', '#ff00ff')).toBe(
+        'linear-gradient(0deg, #00ff00, #ff00ff)',
+      )
     })
   })
 })

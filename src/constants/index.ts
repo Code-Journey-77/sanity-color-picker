@@ -19,4 +19,7 @@ export const PRESET_COLORS = [
   '#9e9e9e',
   '#607d8b',
   '#000000',
+  {hex: '#ff9a9e', hex2: '#fad0c4', angle: 90},
+  {hex: '#a1c4fd', hex2: '#c2e9fb', angle: 180},
+  {hex: '#84fab0', hex2: '#8fd3f4', angle: 45},
 ]

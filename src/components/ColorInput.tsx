@@ -15,7 +15,7 @@ import {
 import {PatchEvent, set, setIfMissing, unset, type ObjectInputProps} from 'sanity'
 import {EditIcon} from './icons/EditIcon'
 import {PRESET_COLORS} from '../constants'
-import {isValidHex, getContrastColor, hexToRgba, hexToHsl} from '../utils'
+import {isValidHex, getContrastColor, hexToRgba, hexToHsl, getGradientString} from '../utils'
 
 export function CustomColorPicker(props: ObjectInputProps) {
   const {value, onChange, elementProps, schemaType} = props
@@ -70,7 +70,7 @@ export function CustomColorPicker(props: ObjectInputProps) {
       if (isGradient) {
         patches.push(set(localValue2, ['hex2']))
         patches.push(set(angle, ['angle']))
-        patches.push(set(`linear-gradient(${angle}deg, ${localValue}, ${localValue2})`, ['css']))
+        patches.push(set(getGradientString(angle, localValue, localValue2), ['css']))
       }
 
       onChange(PatchEvent.from(patches))
@@ -258,7 +258,7 @@ export function CustomColorPicker(props: ObjectInputProps) {
               width: '100%',
               borderRadius: 8,
               background: isGradient
-                ? `linear-gradient(${angle}deg, ${localValue}, ${localValue2})`
+                ? getGradientString(angle, localValue, localValue2)
                 : localValue,
               border: '1px solid #dfe1e5',
             }}
@@ -274,7 +274,7 @@ export function CustomColorPicker(props: ObjectInputProps) {
             const h1 = isObj ? color.hex : color
             const h2 = isObj ? color.hex2 : null
             const ang = isObj ? color.angle || 180 : 180
-            const bg = h2 ? `linear-gradient(${ang}deg, ${h1}, ${h2})` : h1
+            const bg = h2 ? getGradientString(ang, h1, h2) : h1
 
             return (
               <Box
@@ -304,7 +304,7 @@ export function CustomColorPicker(props: ObjectInputProps) {
             {label: 'HSL', value: hexToHsl(localValue), show: !isGradient},
             {
               label: 'CSS Gradient',
-              value: `linear-gradient(${angle}deg, ${localValue}, ${localValue2})`,
+              value: getGradientString(angle, localValue, localValue2),
               show: isGradient,
             },
           ]
