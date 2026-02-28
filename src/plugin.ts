@@ -7,7 +7,7 @@ export interface ColorPickerPluginConfig {
 
 export const customColorPicker = definePlugin<ColorPickerPluginConfig | void>((config) => {
   return {
-    name: 'sanity-color-picker',
+    name: 'sanity-plugin-color-input',
     schema: {
       types: [colorType],
     },

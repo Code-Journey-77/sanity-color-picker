@@ -1,4 +1,4 @@
-# sanity-color-picker
+# sanity-plugin-color-input
 
 A beautifully designed, highly customizable color picker plugin for Sanity Studio v3.
 
@@ -15,13 +15,13 @@ A beautifully designed, highly customizable color picker plugin for Sanity Studi
 
 ```bash
 # Using npm
-npm install sanity-color-picker
+npm install sanity-plugin-color-input
 
 # Using yarn
-yarn add sanity-color-picker
+yarn add sanity-plugin-color-input
 
 # Using pnpm
-pnpm add sanity-color-picker
+pnpm add sanity-plugin-color-input
 ```
 
 ## Setup & Usage
@@ -32,7 +32,7 @@ Add it as a plugin in your `sanity.config.ts` (or `sanity.config.js`):
 
 ```typescript
 import {defineConfig} from 'sanity'
-import {customColorPicker} from 'sanity-color-picker'
+import {customColorPicker} from 'sanity-plugin-color-input'
 
 export default defineConfig({
   // ...other config settings
